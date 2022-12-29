@@ -3,8 +3,8 @@ package com.hut_socialnetwork;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
-
-public class MainActivity extends ReactActivity {
+import android.os.Bundle;
+public class tivity extends ReactActivity {
 
   /**
    * Returns the name of the main component registered from JavaScript. This is used to schedule
@@ -22,11 +22,14 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
-    return new MainActivityDelegate(this, getMainComponentName());
+    return new tivityDelegate(this, getMainComponentName());
   }
-
-  public static class MainActivityDelegate extends ReactActivityDelegate {
-    public MainActivityDelegate(ReactActivity activity, String mainComponentName) {
+  @Override
+protected void onCreate(Bundle savedInstanceState) {
+  super.onCreate(null);
+}
+  public static class tivityDelegate extends ReactActivityDelegate {
+    public tivityDelegate(ReactActivity activity, String mainComponentName) {
       super(activity, mainComponentName);
     }
 
